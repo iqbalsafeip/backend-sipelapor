@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pertanyaans",
+  "info": {
+    "singularName": "pertanyaan",
+    "pluralName": "pertanyaans",
+    "displayName": "pertanyaan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pertanyaan": {
+      "type": "text",
+      "required": true
+    },
+    "kepentingan": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "max": 5
+    }
+  }
+}

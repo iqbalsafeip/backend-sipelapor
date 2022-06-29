@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "group_keluhans",
+  "info": {
+    "singularName": "group-keluhan",
+    "pluralName": "group-keluhans",
+    "displayName": "group-keluhan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "group_keluhans"
+    },
+    "tanggal": {
+      "type": "text"
+    },
+    "items_keluhans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::items-keluhan.items-keluhan",
+      "mappedBy": "group"
+    },
+    "tambahan": {
+      "type": "text"
+    },
+    "gambar": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "status": {
+      "type": "integer"
+    },
+    "teknisi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

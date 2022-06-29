@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items_keluhans",
+  "info": {
+    "singularName": "items-keluhan",
+    "pluralName": "items-keluhans",
+    "displayName": "items-keluhan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pertanyaan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pertanyaan.pertanyaan"
+    },
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group-keluhan.group-keluhan",
+      "inversedBy": "items_keluhans"
+    },
+    "kepuasan": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "max": 5
+    }
+  }
+}
